@@ -1,5 +1,7 @@
 --#DDL queries
-  create table Policyholder (
+create database insurance_db;
+use insurance_db;
+create table Policyholder (
     policyholder_id int primary key AUTO_INCREMENT,
     name varchar(100) not null,
     contact_number varchar(20),
@@ -61,8 +63,8 @@ insert into Policies (policy_id, policyholder_id, policy_type, policy_status, st
 values('P1001', 1, 'Health', 'ACTIVE', '2024-01-01', '2026-01-01'),
 ('P1002', 2, 'Vehicle', 'INACTIVE', '2023-01-01', '2024-01-01'),('P1003', 3, 'Travel', 'ACTIVE', '2024-06-01', '2025-06-01');
 
-Selection and Projection Operation
- (use of select query):
+--Selection and Projection Operation
+ --(use of select query):
 
  --To show all active policies
 select policy_id, policy_type, start_date, end_date
